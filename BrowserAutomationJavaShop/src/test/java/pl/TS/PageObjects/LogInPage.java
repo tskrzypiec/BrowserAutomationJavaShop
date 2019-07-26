@@ -1,6 +1,8 @@
 package pl.TS.PageObjects;
 
 import java.util.List;
+
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
@@ -8,8 +10,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import cucumber.api.DataTable;
+import java.util.Random;
+
+
 
 public class LogInPage extends AbstractPage{
+	
+	//Random rand = new Random(); 			/*to dodane*/
+	//int value = rand.nextInt(50); 			/*to dodane*/
+	String userName = ""+(int)(Math.random()*Integer.MAX_VALUE);	/*to dodane*/
+	String emailID = "User"+userName+"@example.com";			/*to dodane*/
 	
 	final String setEmail = new String("//input[@id='email']");
 	protected By bySetEmail = By.xpath(setEmail);
@@ -40,8 +50,12 @@ public class LogInPage extends AbstractPage{
 	public LogInPage setEmail(DataTable emailData){
 		
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		List<List<String>> dataEmail = emailData.raw();
+		/*List<List<String>> dataEmail = emailData.raw();
 		driver.findElement(byEmailCreate).sendKeys(dataEmail.get(1).get(1));
+		return new LogInPage(driver);   to było */
+		
+		driver.findElement(byEmailCreate).sendKeys(emailID); /*to dodane*/
+
 		return new LogInPage(driver);
 	} 
 	
