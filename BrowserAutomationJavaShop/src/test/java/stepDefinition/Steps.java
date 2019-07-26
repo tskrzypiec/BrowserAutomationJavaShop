@@ -67,14 +67,10 @@ public class Steps {
 		logInPage = landingPage.navigateToLogInButton();
 	}
 
-	@When("^I fill email address$")
-	/*public void shouldFillEmailAddress(DataTable emailData) throws Throwable {   to było */
+	@When("^I use random email$")
 	public void shouldFillEmailAddress() throws Throwable {
-		/*logInPage.setEmail(emailData); to było*/
-		
-		/*logInPage.setEmail(emailData); to było */
-		logInPage.setEmail();  /*tu bez argumentu*/
-
+	
+		logInPage.setEmail();  
 	}
 
 	@And("^I click create an account button")

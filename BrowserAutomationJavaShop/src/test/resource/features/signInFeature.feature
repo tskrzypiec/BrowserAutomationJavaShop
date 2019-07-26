@@ -5,7 +5,7 @@ Feature: This is a sign in feature checks if I am able to create a new account
 
   Scenario: Sign in scenario
     And I click on the log in button
-    When I fill email address
+    When I use random email
     #  | Fields | Value          |#tu nie ma argumentów polacz to z tym kodem na random email  napisz "And uses a random email" bez argumentu
     #  | EMAIL  | test30066@onet.com|
     And I click create an account button
