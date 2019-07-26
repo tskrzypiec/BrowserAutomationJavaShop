@@ -1,27 +1,20 @@
 package pl.TS.PageObjects;
 
 import java.util.List;
-
-
 import java.util.concurrent.TimeUnit;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import cucumber.api.DataTable;
-//import java.util.Random;
 import java.lang.Math;
 
 
 
 public class LogInPage extends AbstractPage{
 	
-	//Random rand = new Random(); 			/*to dodane*/
-	//int value = rand.nextInt(50); 			/*to dodane*/
-	final String userName = ""+(int)(Math.random()*Integer.MAX_VALUE);	/*to dodane*/
-	final String emailID = "User"+userName+"@example.com";			/*to dodane*/
-	
+	final String userName = ""+(int)(Math.random()*Integer.MAX_VALUE);	
+	final String emailID = "User"+userName+"@example.com";		
 	final String setEmail = new String("//input[@id='email']");
 	protected By bySetEmail = By.xpath(setEmail);
 	final String setPassword = new String("//input[@id='passwd']");
@@ -30,7 +23,7 @@ public class LogInPage extends AbstractPage{
 	protected By byEmailCreate = By.id(emailCreate);
 	final String submitLogin = new String("//button[@id='SubmitLogin']");
 	protected By bySubmitLogin = By.xpath(submitLogin);	
-	final String authenticationInfo = new String("//*[@id='center_column']/div[1]/ol/li");
+	final String authenticationInfo = new String("//*[@id='center_column']/div[1]/ol/li");  /*tu nie moze tego znalezc*/
 	protected By byAuthenticationInfo = By.xpath(authenticationInfo);
 	final String expectedResult = new String("Authentication");
 	
@@ -48,16 +41,12 @@ public class LogInPage extends AbstractPage{
 		return new LogInPage(driver);
 	}
 	
-	/*public LogInPage setEmail(DataTable emailData){  to było */
-		public LogInPage setEmail(){   /*tu bez argumentu*/
+	
+	public LogInPage setEmail(){  
 
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		/*List<List<String>> dataEmail = emailData.raw();
-		driver.findElement(byEmailCreate).sendKeys(dataEmail.get(1).get(1));
-		return new LogInPage(driver);   to było */
+		driver.findElement(byEmailCreate).sendKeys(emailID);
 		
-		driver.findElement(byEmailCreate).sendKeys(emailID); /*to dodane*/
-
 		return new LogInPage(driver);
 	} 
 	
