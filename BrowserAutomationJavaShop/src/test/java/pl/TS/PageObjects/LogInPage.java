@@ -19,8 +19,8 @@ public class LogInPage extends AbstractPage{
 	
 	//Random rand = new Random(); 			/*to dodane*/
 	//int value = rand.nextInt(50); 			/*to dodane*/
-	String userName = ""+(int)(Math.random()*Integer.MAX_VALUE);	/*to dodane*/
-	String emailID = "User"+userName+"@example.com";			/*to dodane*/
+	final String userName = ""+(int)(Math.random()*Integer.MAX_VALUE);	/*to dodane*/
+	final String emailID = "User"+userName+"@example.com";			/*to dodane*/
 	
 	final String setEmail = new String("//input[@id='email']");
 	protected By bySetEmail = By.xpath(setEmail);
@@ -48,8 +48,9 @@ public class LogInPage extends AbstractPage{
 		return new LogInPage(driver);
 	}
 	
-	public LogInPage setEmail(DataTable emailData){
-		
+	/*public LogInPage setEmail(DataTable emailData){  to było */
+		public LogInPage setEmail(){   /*tu bez argumentu*/
+
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		/*List<List<String>> dataEmail = emailData.raw();
 		driver.findElement(byEmailCreate).sendKeys(dataEmail.get(1).get(1));

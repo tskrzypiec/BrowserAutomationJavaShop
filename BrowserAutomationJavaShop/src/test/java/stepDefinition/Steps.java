@@ -72,7 +72,8 @@ public class Steps {
 	public void shouldFillEmailAddress() throws Throwable {
 		/*logInPage.setEmail(emailData); to było*/
 		
-		logInPage.setEmail(emailData);
+		/*logInPage.setEmail(emailData); to było */
+		logInPage.setEmail();  /*tu bez argumentu*/
 
 	}
 
