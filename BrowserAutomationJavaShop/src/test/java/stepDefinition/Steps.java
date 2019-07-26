@@ -29,24 +29,23 @@ public class Steps {
 	CategoryPage categoryPage;
 	ProductPage productPage;
 	
-	 private static WebDriver driver;
+	 private static WebDriver driver;   /*tutaj przesuwalem after itd*/
 
-	    @BeforeClass
-	    public static void setupClass() {
+	@BeforeClass
+	 public static void setupClass() {
 	        
-	    	WebDriverManager.chromedriver().setup();
+	    WebDriverManager.chromedriver().setup();
 			
-	    	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	    	driver.manage().window().maximize();
+	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
 	   
-	    }
+	 }
 
-	    @Before
-	    public void setupTest() {
-	        
-	    	driver = new ChromeDriver();
-
-	    }
+	@Before
+	 public void setupTest() {
+		
+	    driver = new ChromeDriver();
+	 }
 		
 	@After
 	public void afterMethodTestSetUp() {

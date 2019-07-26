@@ -23,7 +23,7 @@ public class LogInPage extends AbstractPage{
 	protected By byEmailCreate = By.id(emailCreate);
 	final String submitLogin = new String("//button[@id='SubmitLogin']");
 	protected By bySubmitLogin = By.xpath(submitLogin);	
-	final String authenticationInfo = new String("//*[@id='center_column']/div[1]/ol/li");  /*tu nie moze tego znalezc*/
+	final String authenticationInfo = new String("//p[@class='info-account']");  /*tu nie moze tego znalezc* zrob tutaj zeby spradzał tytul strony i zeby ona zawierala slow my-account*/
 	protected By byAuthenticationInfo = By.xpath(authenticationInfo);
 	final String expectedResult = new String("Authentication");
 	
@@ -61,7 +61,7 @@ public class LogInPage extends AbstractPage{
 		
 		driver.findElement(bySubmitLogin).click();
 		
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	
 		Assert.assertFalse("Log in failure! Email or password failed!", driver.findElement(byAuthenticationInfo).getText().contains(expectedResult));
 
