@@ -6,8 +6,8 @@ Feature: This is a sign in feature checks if I am able to create a new account
   Scenario: Sign in scenario
     And I click on the log in button
     When I fill email address
-      | Fields | Value          |
-      | EMAIL  | test30066@onet.com|
+    #  | Fields | Value          |
+    #  | EMAIL  | test30066@onet.com|
     And I click create an account button
     And I submit the form with valid data
       | Fields        | Value         |
