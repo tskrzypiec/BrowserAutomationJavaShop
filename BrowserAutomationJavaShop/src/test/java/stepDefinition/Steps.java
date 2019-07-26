@@ -68,9 +68,12 @@ public class Steps {
 	}
 
 	@When("^I fill email address$")
-	public void shouldFillEmailAddress(DataTable emailData) throws Throwable {
-
+	/*public void shouldFillEmailAddress(DataTable emailData) throws Throwable {   to było */
+	public void shouldFillEmailAddress() throws Throwable {
+		/*logInPage.setEmail(emailData); to było*/
+		
 		logInPage.setEmail(emailData);
+
 	}
 
 	@And("^I click create an account button")

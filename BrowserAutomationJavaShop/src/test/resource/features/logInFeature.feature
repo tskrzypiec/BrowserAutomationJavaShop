@@ -5,7 +5,7 @@ Feature: This is a log in feature checks if I am able to log in with correct ema
 
   Scenario: Log in scenario
     And I click on the log in button
-    When I put email and password
+    When I put email and password  
       | Fields   | Value           |
       | EMAIL    | test33@onet.com |
       | PASSWORD | password123     |
