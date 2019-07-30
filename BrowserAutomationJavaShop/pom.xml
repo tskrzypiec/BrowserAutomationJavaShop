@@ -11,6 +11,19 @@
 	<name>BrowserAutomationJavaShop</name>
 	<url>http://maven.apache.org</url>
 
+	<!--<plugins>
+	
+	<plugin>
+	
+	<groupId>net.masterthought</groupId>
+    <artifactId>cucumber-reporting</artifactId>			//dodane w formie pluginu raport htlm
+    <version>4.8.0</version>
+	</plugin>
+	
+	</plugins>  -->
+
+
+
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
