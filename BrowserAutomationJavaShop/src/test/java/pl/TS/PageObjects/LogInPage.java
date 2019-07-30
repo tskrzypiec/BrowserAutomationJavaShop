@@ -63,14 +63,8 @@ public class LogInPage extends AbstractPage{
 		
 		Thread.sleep(3000);
 	
-		//Assert.assertFalse("Log in failure! Email or password failed!", driver.findElement(byAuthenticationInfo).getText().contains(expectedResult));
-
 		Assert.assertFalse("Log in failure! Email or password failed!", driver.getTitle().contains("my-account")); /*dodalem szukanie w linku my account*/
 
-		
-		//driver.getTitle().contain(“my-account”);
-		
-		
 		Thread.sleep(2000);
 
 		return new ConfirmAccountPage(driver);
