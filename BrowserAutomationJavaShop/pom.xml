@@ -18,7 +18,7 @@
 	<plugin>
 	
 	<groupId>net.masterthought</groupId>
-    <artifactId>cucumber-reporting</artifactId>			//dodane w formie pluginu raport htlm
+    <artifactId>cucumber-reporting</artifactId>		
     <version>4.8.0</version>
     
     <executions>
