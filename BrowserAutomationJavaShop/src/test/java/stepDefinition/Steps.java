@@ -38,8 +38,8 @@ public class Steps {
 	        
 	    WebDriverManager.chromedriver().setup();
 			
-	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	    driver.manage().window().maximize();
+	//    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	 //   driver.manage().window().maximize();
 	    
 	    
 	  /*  System.setProperty("webdriver.chrome.driver", "‪C:/chromedriver.exe");
@@ -68,6 +68,10 @@ public class Steps {
 	 public void setupTest() {
 		
 	    driver = new ChromeDriver();
+	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	    driver.manage().window().maximize();
+	    
+	    
 	 }
 		
 	@After
