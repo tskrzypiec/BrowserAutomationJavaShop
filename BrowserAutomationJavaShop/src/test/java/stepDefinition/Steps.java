@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -38,6 +40,27 @@ public class Steps {
 			
 	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	    driver.manage().window().maximize();
+	    
+	    
+	  /*  System.setProperty("webdriver.chrome.driver", "‪C:/chromedriver.exe");
+	    String isHeadless = System.getProperty("headless", "false");
+		System.out.println("headlessMode: " + isHeadless);
+		
+		if (isHeadless.equals("true")) {
+			ChromeOptions options = new ChromeOptions();
+			options.setHeadless(true);
+			driver = new ChromeDriver(options);
+		} else {
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+		}
+	       headless  */
+	    
+	    
+	    
+	    
+	    
+	    
 	   
 	 }
 
