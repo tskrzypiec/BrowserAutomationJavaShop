@@ -31,19 +31,19 @@ public class Steps {
 	CategoryPage categoryPage;
 	ProductPage productPage;
 	
-	 private static WebDriver driver;   /*tutaj przesuwalem after itd*/
+	 private static WebDriver driver;   
 
 	@BeforeClass
 	 public static void setupClass() {
 	        
 	    WebDriverManager.chromedriver().setup();
 			
-	//    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	 //   driver.manage().window().maximize();
-	    
-	    
-	  /*  System.setProperty("webdriver.chrome.driver", "‪C:/chromedriver.exe");
-	    String isHeadless = System.getProperty("headless", "false");
+	 }
+
+	@Before
+	 public void setupTest() {
+		
+		String isHeadless = "false";
 		System.out.println("headlessMode: " + isHeadless);
 		
 		if (isHeadless.equals("true")) {
@@ -54,24 +54,7 @@ public class Steps {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
-	       headless  */
-	    
-	    
-	    
-	    
-	    
-	    
-	   
-	 }
-
-	@Before
-	 public void setupTest() {
 		
-	    driver = new ChromeDriver();
-	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	    driver.manage().window().maximize();
-	    
-	    
 	 }
 		
 	@After
