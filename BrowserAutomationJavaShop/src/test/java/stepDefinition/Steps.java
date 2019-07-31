@@ -43,7 +43,7 @@ public class Steps {
 	@Before
 	 public void setupTest() {
 		
-		String isHeadless = "false";
+		String isHeadless = "true";
 		System.out.println("headlessMode: " + isHeadless);
 		
 		if (isHeadless.equals("true")) {

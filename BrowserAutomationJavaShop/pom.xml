@@ -33,7 +33,7 @@
     
     <projectName>BrowserAutomationTestJavaShop   </projectName>
     <outputDirectory>${project.build.directory/cucumber-report-html</outputDirectory>
-    <outputDirectory>${project.build.directory/cucumber-report-html</outputDirectory>
+    <cucumberOutput>${project.build.directory/cucumber-report-html</cucumberOutput>
     
     
     </configuration>
