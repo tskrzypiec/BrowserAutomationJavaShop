@@ -50,8 +50,10 @@ public class Steps {
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(true);
 			driver = new ChromeDriver(options);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		} else {
 			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		}
 		
