@@ -55,10 +55,9 @@ public class Steps {
 			driver = new ChromeDriver();
 
 			driver.manage().window().fullscreen();
-			//driver.manage().window().maximize();
-			
+			//driver.manage().window().maximize();	
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-			
+	
 		}
 		
 	 }

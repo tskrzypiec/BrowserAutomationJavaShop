@@ -6,7 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 public class ProductPage extends AbstractPage {
 	
-	final String expectedResult = new String("56");
+	final String expectedResult = new String("56.00");//zmienilem na format 56.00 zrob dodawanie total ptoducts + total shipmetn
+	final String totalShipping = new String("2"); //dodalem , dodaj locator 
+	//final String totalProducts = new String ()
+	
+	//final decimal expected result = totalshipping + total products;
 	final String cartTotal = new String("//span[@class='ajax_block_cart_total']");
 	protected By byCartTotal = By.xpath(cartTotal);
 	
