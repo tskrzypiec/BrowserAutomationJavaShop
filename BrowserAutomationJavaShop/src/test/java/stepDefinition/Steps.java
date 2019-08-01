@@ -43,7 +43,7 @@ public class Steps {
 	@Before
 	 public void setupTest() {
 		
-		String isHeadless = "true";
+		String isHeadless = "false";
 		System.out.println("headlessMode: " + isHeadless);
 		
 		if (isHeadless.equals("true")) {
@@ -53,8 +53,12 @@ public class Steps {
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		} else {
 			driver = new ChromeDriver();
+
+			driver.manage().window().fullscreen();
+			//driver.manage().window().maximize();
+			
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-			driver.manage().window().maximize();
+			
 		}
 		
 	 }
