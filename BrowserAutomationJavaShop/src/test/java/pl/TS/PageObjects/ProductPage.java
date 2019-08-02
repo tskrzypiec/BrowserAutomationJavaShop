@@ -1,5 +1,7 @@
 package pl.TS.PageObjects;
 
+import java.math.BigDecimal;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +12,11 @@ public class ProductPage extends AbstractPage {
 	final String totalShipping = new String("2"); //dodalem , dodaj locator 
 	//final String totalProducts = new String ()
 	//final String quantity = new String zrob cala logike liczenia product razy ilosc + shipping
-	//final decimal expected result = totalshipping + total products;
+	final static BigDecimal EXPECTEDRESULT = new BigDecimal(0);
+	
+	
+	
+	//= totalshipping + total products;
 	final String cartTotal = new String("//span[@class='ajax_block_cart_total']");
 	protected By byCartTotal = By.xpath(cartTotal);
 	
