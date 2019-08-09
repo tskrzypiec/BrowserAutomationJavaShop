@@ -46,7 +46,7 @@ public class Steps {
 		String isHeadless = "false";
 		System.out.println("headlessMode: " + isHeadless);
 		
-		if (isHeadless.equals("true")) {
+		if (isHeadless.equals("false")) {
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(true);
 			driver = new ChromeDriver(options);
