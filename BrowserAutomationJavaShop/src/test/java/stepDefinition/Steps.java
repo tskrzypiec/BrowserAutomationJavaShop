@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.After;
@@ -37,13 +38,13 @@ public class Steps {
 	 public static void setupClass() {
 	        
 	    WebDriverManager.chromedriver().setup();
-			
+	   // System.setProperty("webdriver.gecko.driver", "‪C://geckodriver-v0.24.0-win32//geckodriver.exe");	
 	 }
 
 	@Before
 	 public void setupTest() {
 		
-		String isHeadless = "true";
+		String isHeadless = "false";
 		System.out.println("headlessMode: " + isHeadless);
 		
 		if (isHeadless.equals("true")) {

@@ -23,13 +23,18 @@ public class ProductPage extends AbstractPage {
 	final String CountTotal = new String ("//span[@class='ajax_block_cart_total']"); 
 	protected By byCountTotal = By.xpath(CountTotal);
 
-	
+	//BigDecimal bigDecimalCurrency=new BigDecimal(currency);
 	
 	
 	final String cartTotal = new String("//span[@class='ajax_block_cart_total']");
 	protected By byCartTotal = By.xpath(cartTotal);
 	
-	final String price = driver.findElement(byCountTotal).getText();
+	final  String TotalStrring = driver.findElement(byCountTotal).getText();
+	final  BigDecimal COUNTTOTAL = new BigDecimal(TotalStrring);
+	
+	
+	
+	
 		public ProductPage(WebDriver driver) {
 		super(driver);
 		
@@ -41,8 +46,12 @@ public ProductPage checkIfTheTotalPriceIsCorrect() throws InterruptedException {
 	
 	//System.out.println(driver.findElement(byCountTotal).getText().substring(0, CountTotal.length() -1));
 	
-	System.out.println(driver.findElement(byCountTotal).getText().substring(1, price.length()));
-
+	System.out.println(driver.findElement(byCountTotal).getText().substring(1, TotalStrring.length()));
+	
+	
+	
+	System.out.println("Total to " +COUNTTOTAL);
+	
 	//System.out.println(driver.findElement(byCountTotal).getText());
 
 	/*
